@@ -1,0 +1,83 @@
+<!doctype html>
+  <html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hyrule Jewel Exchange</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css", rel="stylesheet", integrity="sha384-Xqcy5ttufkC3rBa8EdiAyA1VgOGrmel2Y+wxm4K3kI3fcjTWlDWrlnxyD6hOi3PF", crossorigin="anonymous"> 
+
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Sansita" rel="stylesheet">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+      <script type="text/javascript" src="assets/game.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body style="background-image: url('assets/images/background.jpg');">
+
+  <div id="main-container" class="container">
+    	<h1 class="header"><strong>Hyrule Auction House</strong></h1>
+        <div class="row">
+          <div class="col-md-4 col-sm-12"> 
+  	           <section class="main-section">
+  		            <p> Welcome to the Hyrule Auction House, where quality products are purchased for exact rupees amounts only!(We offer no change whatsoever! Company policy.)</p>
+  		            <p>At the beginning of the auction, we will give you a randomly selected amount for a one-of-a-kind object!</p>
+		              <p>We are only accepting four kinds of rupees (shown here) and we are not telling you how much they are worth until you click on them. (For added fun, we'll assign new values to the rupees each time you start over.)</p> 
+		              <p>To win the game, you must match the exact amount we ask for. Go over and you lose!</p>
+		            </section>
+		      </div>
+ 
+        <div class="col-md-7 col-sm-12">
+              <section class="main-section">
+   		           <div class ="row">
+   			            <div class="col-md-6 col-sm-12">
+   			                <h2>Price</h2>
+   			                <h1><div id="price">0</div></h1>
+   		             </div>
+
+   		           <div class="col-md-6 col-sm-12">
+   			            <div class="row">
+                      <h3> Wins: 
+                     <span id="wins"><p>0</p></span>
+                      </h3>
+   			          </div>
+
+   		            <div class="row">
+   		               <h3>Losses: 
+   		                 <span id="losses"><p>0</p></span>
+                     </h3>
+                  </div>
+   		         </div>
+   		     </div>
+
+   		     <div class="row">
+   		         <div class="col-md-3 col-sm-6 rupee" id="green"><img src=assets/images/green.png id="green"></div>
+
+   		         <div class="col-md-3 col-sm-6 rupee" id="red"><img src=assets/images/red.png id="red"></div>
+
+   		         <div class="col-md-3 col-sm-6 rupee" id="blue"><img src=assets/images/blue.png id="blue"></div>
+
+   		         <div class="col-md-3 col-sm-6 rupee" id="purple"><img src=assets/images/purple.png id="purple"></div>
+   		     </div>
+
+   		     <div class="row">
+   		         <div class="col-md-6 amount-paid" id="amount-paid">
+   		         <h2>Total Rupees Spent</h2>
+   			        <h1><div id='total'>0</div></h1>
+   		         </div>
+   		     </div>
+   		</section>
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>
+   
+    

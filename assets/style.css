@@ -1,0 +1,31 @@
+.header {
+	font-family: 'Sansita', sans-serif;
+	color: black;
+	font-size: 45px;
+	font-border: white 2px;
+	text-align: center;
+}
+
+.main-section {
+ position:relative;
+  padding: 10px;
+  float: left;
+  background: black;
+	opacity: .60;
+	filter: alpha (opacity=60);
+}
+
+.main-section p {
+	font-size: 20px;
+	font-color: white solid;
+}
+.main-section img {
+	width: 87px;
+	height: 125px;
+	opacity: 1;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+

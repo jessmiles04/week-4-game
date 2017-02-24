@@ -1,40 +1,40 @@
 $(document).ready(function(){
 //variables
-var wins=0;
-var losses=0;
-var minPrice=19;
-var maxPrice=120;
-var price= priceFromRange (minPrice, maxPrice);
+var wins = 0;
+var losses = 0;
+var minPrice = 19;
+var maxPrice = 120;
+var price = priceFromRange (minPrice, maxPrice);
 //crystal variants
-var rupee={
+var rupee = {
 	green:	
 	{name: "Green",
-	value:0
+	value: 0
 	},
 	red:
 	{name: "Red",
-	value:0
+	value: 0
 	},
 	blue:
 	{name: "Blue",
-	value:0
+	value: 0
 	},
 	purple:
 	{name: "Purple",
-	value:0
+	value: 0
 	}}
 	 
-	
-	
-var amountPaid=0;
+var amountPaid = 0;
 var points;
 
 
 function priceFromRange(min, max){
 			return Math.floor(Math.random()*(max-min)+min);
 		}
+
 function startGame(){
-//function for random price
+
+	//function for random price
 
 	rupee.green.points = Math.floor(Math.random() * 12) + 1;
 				
@@ -45,19 +45,20 @@ function startGame(){
 	rupee.purple.points=Math.floor(Math.random() * 12) + 1;	
 //start game
 	console.log("green:" + rupee.green.points+ "|red: " +rupee.red.points)
-		amountPaid=0;
-		price= priceFromRange (minPrice, maxPrice);
+		amountPaid = 0;
+		price = priceFromRange (minPrice, maxPrice);
 		$("#price").text(price);
-		//$("amountPaid").text(amoutPaid);
+		$("#total").text(amountPaid);
 	console.log(price);
+	console.log(amountPaid);
 	}
 
-	var amountPaid=function(clickedRupee){
+	var amountPaid = function(clickedRupee){
 		amountPaid += clickedRupee.points;
 		$("#total").html(amountPaid);
 	}
 
-	var winLose= function(){
+	var winLose = function(){
 		if (amountPaid == price){
 			console.log("Winner.");
 			wins++;
@@ -77,16 +78,16 @@ function startGame(){
 
 startGame();
 	$("#green").click(function(){
-		amountPaid(rupee.green.points);
+		amountPaid(rupee.green)
 	});
 	$("#red").click(function(){
-		amountPaid(rupee.red.points);
+		amountPaid(rupee.red)
 	});
 	$("#blue").click(function(){
-		amountPaid(rupee.blue.points);
+		amountPaid(rupee.blue)
 	});
 	$("#purple").click(function(){
-		amountPaid(rupee.purple.points);
+		amountPaid(rupee.purple)
 	});
 })
 

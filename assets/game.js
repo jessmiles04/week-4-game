@@ -53,7 +53,7 @@ function startGame(){
 	console.log(amountPaid);
 	}
 
-	var amountPaid = function(clickedRupee){
+	function amountPaid(clickedRupee){
 		amountPaid += clickedRupee.points;
 		$("#total").html(amountPaid);
 	}

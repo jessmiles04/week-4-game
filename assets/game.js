@@ -32,6 +32,26 @@ function priceFromRange(min, max){
 			return Math.floor(Math.random()*(max-min)+min);
 		}
 
+function pay(clickedRupee){
+		amountPaid += clickedRupee.points;
+		$("#total").html(amountPaid);
+
+
+			if (amountPaid == price){
+			console.log("Winner.");
+			wins++;
+			$("#wins").html(wins);
+			startGame();
+		}
+
+		else if (amountPaid > price){
+			console.log("loser");
+			losses++;
+			$("#losses").html(losses);
+			startGame();
+		}
+	}
+
 function startGame(){
 
 	//function for random price
@@ -53,41 +73,23 @@ function startGame(){
 	console.log(amountPaid);
 	}
 
-	function amountPaid(clickedRupee){
-		amountPaid += clickedRupee.points;
-		$("#total").html(amountPaid);
-	}
 
-	var winLose = function(){
-		if (amountPaid == price){
-			console.log("Winner.");
-			wins++;
-			$("#wins").html(wins);
-			startGame();
-		}
-
-		else if (amountPaid > price){
-			console.log(loser);
-			losses++;
-			$("#losses").html(losses);
-			startGame();
-		}
-	}
 
 
 
 startGame();
+
 	$("#green").click(function(){
-		amountPaid(rupee.green)
+		pay(rupee.green)
 	});
 	$("#red").click(function(){
-		amountPaid(rupee.red)
+		pay(rupee.red)
 	});
 	$("#blue").click(function(){
-		amountPaid(rupee.blue)
+		pay(rupee.blue)
 	});
 	$("#purple").click(function(){
-		amountPaid(rupee.purple)
+		pay(rupee.purple)
 	});
 })
 

@@ -10,23 +10,24 @@
  position:relative;
   padding: 10px;
   float: left;
-  background: black;
-	opacity: .60;
+  background: rgba(0,0,0,0.5);
 	filter: alpha (opacity=60);
 }
 
 .main-section p {
 	font-size: 20px;
-	font-color: white solid;
+	font-color: #FFFFFF solid;
 }
 .main-section img {
 	width: 87px;
 	height: 125px;
 	opacity: 1;
+	border-radius: 25px;
 }
 
 h1, h2, h3 {
 	text-align: center;
+	font-color: #FFFFFF;
 }
 
 .footer {
@@ -42,8 +43,6 @@ h1, h2, h3 {
      border-top: thick double #4aaaa5;
     }
 
- .container {
-  margin: 0 auto;
-  width: 2000px;
-
+#rupees {
+	color: rgba (0,0,0,0.5);
 }
